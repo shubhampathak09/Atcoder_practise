@@ -9,7 +9,7 @@ int main(){
 	
 	stack<int> s;
 	
-	vector<int>arr={1};
+	vector<int>arr={1,2,3,1,4,5,2,3,6};
 	
 	vector<int> nge(arr.size());
 	
@@ -19,6 +19,8 @@ int main(){
 	nge[arr.size()-1]=arr.size();
 	
 	int n=arr.size();
+	
+	int k=3;
 	
 	for(int i=n-2;i>=0;i--){
 		
@@ -36,6 +38,23 @@ int main(){
 			nge[i]=s.top();
 		}
 		s.push(i);
+	}
+	
+	
+	for(int i=0;i<=n-k;i++)
+	{
+		
+		// enter the loop find max of window starts at i
+		int j=i;
+		
+		
+		while(nge[j]<i+k)  // indexx  lies withi window
+		{
+			j=nge[j];
+		}
+		
+		cout<< arr[j]<<" ";
+		
 	}
 	
 }
