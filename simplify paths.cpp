@@ -1,5 +1,5 @@
 // simplify path
-#include<bits/stc++.h>
+#include<bits/stdc++.h>
 using namespace  std;
 
 
@@ -15,10 +15,22 @@ string simplifyPath(string path){
 	
 	// 1. find all token 
 	
+   istringstream iss(path);
+	
+	vector<string> tokens;
+	
+	string token;
+	
+	while(getline(iss,token,'/')){
+		cout<<token<<endl;
+	}  
+	
+	return "";
 }
 
 int main(){
 	
+	string path="/../x/y/../z/././w/a///../../c/./";
 	
-	
+	simplifyPath(path);
 }
