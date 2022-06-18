@@ -44,6 +44,30 @@ int diameter(node*root){
 	
 }
 
+pair<int,int> optDiameter(node*root){
+	
+	if(root==NULL){
+		pair<int,int> p;
+		p.first=p.second=0;
+		return p;
+	}
+	
+	pair<int,int>temp;
+	
+	pair<int,int> pleft=optDiameter(root->left);
+	pair<int,int>pright=optDiameter(root->right);
+	
+	temp.first=max(pleft.first,pright.first)+1;
+	
+	int d1=pleft.first +pright.first +1;
+	int d2= max(pleft.second, pright.second);
+	int d3=max(d1,d2);
+	
+	temp.second=d3;
+	
+	return temp;
+}
+
 int main(){
 	
 	struct node*root=new node(1);
@@ -57,5 +81,8 @@ int main(){
 	
 	
 	cout<<diameter(root);
+	
+	
+	// adding optimised diameter code
 	
 }
