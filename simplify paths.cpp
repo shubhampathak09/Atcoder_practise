@@ -22,9 +22,16 @@ string simplifyPath(string path){
 	string token;
 	
 	while(getline(iss,token,'/')){
-		cout<<token<<endl;
+		if(token=="." || token =="")
+		continue;
+		tokens.push_back(token);
+		//cout<<token<<endl;
 	}  
 	
+	
+	for(string s:tokens){
+		cout<<s<<" ,";
+	}
 	return "";
 }
 
