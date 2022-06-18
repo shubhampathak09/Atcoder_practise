@@ -33,6 +33,20 @@ int replaceWithSum(node *node){
 	
 }
 
+void inorder(struct node*root){
+	
+	if(root==NULL)
+	return;
+	
+	inorder(root->left);
+	
+	cout<<root->data<<" ";
+	
+	inorder(root->right);
+	
+	
+}
+
 int main(){
 	
 struct node*root=new node(1);
