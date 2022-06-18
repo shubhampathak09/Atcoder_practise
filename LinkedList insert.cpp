@@ -45,6 +45,20 @@ void printLL(node *head){
 	cout<<endl;
 }	
 
+void insertAtMiddle(node*head,int data,int pos){
+	
+	node*temp=head;
+	
+	for(int i=1;i<=pos-1;i++){
+		temp=temp->next;
+	}
+	
+	node*nn=temp->next;
+	temp->next=new node(data);
+	temp->next->next=nn;
+	
+}
+
 int main(){
 
 	
@@ -55,6 +69,8 @@ node *head=NULL;
 		insertAtHead(head,2);
 		insertAtHead(head,1);
 		insertAtHead(head,0);
+	
+	     insertAtMiddle(head,100,3);
 	
 	printLL(head);
 }
