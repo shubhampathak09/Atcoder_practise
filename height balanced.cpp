@@ -8,9 +8,13 @@ struct node
 	int data;
 	struct node*left;
 	struct node*right;
+	node(int data){
+		this->data=data;
+		this->left=NULL;
+		this->right=NULL;
+	}
 	
-	
-}
+};
 
 
 pair<int,bool> heightBalanced(struct node*root){
@@ -27,7 +31,7 @@ pair<int,bool> heightBalanced(struct node*root){
 	
 	
 	pair<int,bool> left=heightBalanced(root->left);
-	pair<int,bool> right=heightBalanced(root->right)
+	pair<int,bool> right=heightBalanced(root->right);
 	
 	
 	p.first=max(left.first,right.first)+1;
