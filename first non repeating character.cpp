@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*
+
 int main(){
 	
 string s="aabccbcd";
@@ -44,4 +46,42 @@ else
 }
 // fml
 
+*/
 
+int main(){
+	
+	queue<char> q;
+	
+	int fre[27]={0};
+	
+	char ch;
+	
+	cin>>ch;
+	
+	while(ch!='.'){
+		
+		
+		q.push(ch);
+		fre[ch-'a']++;
+		
+		while(!q.empty()){
+			
+			
+			int indx=q.front()-'a';
+			if(fre[indx]>1)
+			q.pop();
+		    else
+		    {
+			
+			cout<<q.front()<<endl;
+			break;	
+		}
+		}
+		
+		if(q.empty()){
+			cout<<"-1"<<endl;
+		}
+		cin>>ch;
+	}
+	
+}
