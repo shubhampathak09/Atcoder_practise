@@ -63,5 +63,16 @@ root->right->right=new node(6);
 
 root->left->right->left=new node(7);	
 	
+cout<<"initally.."<<endl;
+
+inorder(root);
+
+
+cout<<"Now.."<<endl;
+
+replaceWithSum(root);
+
+inorder(root);
+
 	
 } 
