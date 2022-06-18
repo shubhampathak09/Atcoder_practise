@@ -32,7 +32,7 @@ int main(){
 	vector<int> arr={1,2,3,4,5};
 	int n=arr.size();
 	int i=0;
-	int x=6;
+	int x=10;
 	
 	cout<<countSubsets(arr,n,i,x);
 	
