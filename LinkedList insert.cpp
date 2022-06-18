@@ -14,7 +14,29 @@ struct node
 	
 };
 
-
+void iterativeReverse(node*head){
+	
+	
+	node*prev=NULL;
+	node*curr=head;
+	node*temp;
+	
+	while(curr!=NULL){
+		
+		temp=curr->next;
+		
+		curr->next=prev;
+		
+		prev-=curr;
+		
+		curr=temp;
+		
+	}
+	
+	head=prev;
+	
+	return head;
+}
 
 //work --Linked List
 
@@ -59,6 +81,27 @@ void insertAtMiddle(node*head,int data,int pos){
 	
 }
 
+
+node *recReverse(node*head){
+	
+	
+	if(head==NULL ||head->next==NULL)
+	{
+	   cout<<head->data;
+       return head;
+}
+       
+       node* shead=recReverse(head->next);
+       
+       head->next->next=head;
+       
+       head->next=NULL;
+       
+       return shead;
+       
+  	
+}
+
 int main(){
 
 	
@@ -70,7 +113,14 @@ node *head=NULL;
 		insertAtHead(head,1);
 		insertAtHead(head,0);
 	
-	     insertAtMiddle(head,100,3);
+//	     insertAtMiddle(head,100,3);
+	
+//	printLL(head);
+	
+	
+	recReverse(head);
+	
+	cout<<endl;
 	
 	printLL(head);
 }
