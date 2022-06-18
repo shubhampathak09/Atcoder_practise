@@ -29,10 +29,58 @@ string simplifyPath(string path){
 	}  
 	
 	
-	for(string s:tokens){
-		cout<<s<<" ,";
+ 
+	
+	vector<string>stack;
+	
+	if(path[0]=='/'){
+		// denotes paths is abs path
+		
+		stack.push_back("");
+		
 	}
-	return "";
+	
+	
+	for(string token: tokens){
+		
+		if(token==".."){
+			
+			// abs path   or relative path
+			
+			if(stack.size()==0 || stack[stack.size()-1]=="..")
+			{
+				stack.push_back("..");
+			}
+			else if(stack[stack.size()-1]!=".."){
+				stack.pop_back();
+			}
+			
+			
+		}else
+		{
+		stack.push_back(token);	
+		}
+		
+	}
+	
+	if(stack.size()==1 && stack[0]=""){
+		return "/";
+	}
+	//2.
+	//abs vs relative path
+	// ..
+	// /a/b/../..  /
+	
+	
+	ostringstream oss;
+	
+	for(auto  token :stack){
+		oss<< token<<"/";
+	}
+	
+	
+	
+	return oss.str();
 }
 
 int main(){
