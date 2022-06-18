@@ -3,7 +3,7 @@ using namespace std;
 
 int main(){
 	
-string s;
+string s="aabccbcd";
 
 queue<char>q;
 
@@ -16,12 +16,32 @@ result.push_back(s[0]);
 
 mp[s[0]]=1;
 
+q.push(s[0]);
+
 for(int i=1;i<s.length();i++){
-	
+mp[s[i]]++;
+
+auto x=q.front();
+
+if(x==s[i])
+{
+q.pop();
+result.push_back('0');
+}
+else
+{
+	if(q.size()==0)
+	result.push_back('0');
+	else
+	result.push_back(x);
+	}	
 	
 }	
 	
-	
+	for(auto x :result){
+		cout<<x<<" ";
+	}
 }
+// fml
 
 
