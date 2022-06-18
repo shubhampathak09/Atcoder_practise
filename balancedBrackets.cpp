@@ -26,7 +26,7 @@ void generateBalancedBrackets(int open,int close,int n,string bracket){
 
 int main(){
 	
-	int n=10;
+	int n=3;
 	string bracket="";
 	generateBalancedBrackets(0,0,n,bracket);
 	
