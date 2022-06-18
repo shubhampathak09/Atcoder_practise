@@ -3,15 +3,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-node  * descendethSum(node *root){
+void replaceWithSum(node *node){
 	
-	
-	if(root==NULL)
+	if(node==NULL)
 	return 0;
-	
-	
-	
 	
 }
 
