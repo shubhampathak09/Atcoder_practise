@@ -8,7 +8,14 @@ using namespace  std;
 // cd  ~/Desktop
 
 // / -> Root path
-/ /x/y/z
+/// /x/y/z
+
+
+string simplifyPath(string path){
+	
+	// 1. find all token 
+	
+}
 
 int main(){
 	
