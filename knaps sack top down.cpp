@@ -1,5 +1,13 @@
 // knapsakc top dow
 
+// types of knapsack
+// subset sum problem
+// equals sum partiton problem
+// count of subset sum problem
+// min subset sum problem
+// target sum problem
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
