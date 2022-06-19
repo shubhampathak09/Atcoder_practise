@@ -34,7 +34,7 @@ using namespace  std;
 bool targetSum(int sum,int ar[][],int n,int m){
 	
 	
-	
+//lolzl	
 	
 }
 
