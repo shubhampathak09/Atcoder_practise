@@ -14,6 +14,41 @@ struct node
 	
 };
 
+
+void kreverse(node*head,int k){
+	
+	if(head==NULL)
+	return NULL;
+	
+	
+	node*curr=head;
+	node*prev=NULL;
+	node*temp;
+	
+	int cnt=1;
+//	int sz=getsize(head);
+	
+//	
+//	if(k>sz){
+//		return head;
+//	}
+	
+	while(curr !=NULL && cnt<=k){
+		
+		temp=curr->next;
+		curr->next=prev;
+		prev=curr;
+		curr=temp;
+		
+	}
+	
+	if(temp!=NULL){
+		head->next=kreverse(temp,k);
+	}
+	
+	return prev;
+}
+
 void iterativeReverse(node*head){
 	
 	
