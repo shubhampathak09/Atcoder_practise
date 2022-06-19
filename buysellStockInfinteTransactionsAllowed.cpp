@@ -9,27 +9,37 @@ int maxProfit(vector<int>profit,int n){
 	int bd=0;
 	int sd=0;
 	int profitT=0;
-	
-	for(int i=0;i<n;i++){
+	bool checkDip=false;
+	for(int i=1;i<n;i++){
 		
 		// check for case i=0 since i-1 is not possible in that case
-		if(arr[i]>=arr[i-1]){
+		if(profit[i]>=profit[i-1]){
 			sd++;
 		}else
 		{
+			checkDip=true;
 			profitT+= profit[sd] -profit[bd];
 			sd=bd=i;
 		}
 		
 	}
 	
-	cout<<profitT;
+	if(checkDip==false)
+	{
+		return profit[n-1] -profit[0];
+	}
+//	cout<<profitT;
+	return profitT;
 }
 
 
 int main(){
 	
 	
+	vector<int>profit={1,2,3,4,5,6};
 	
+	int n=profit.size();
+	
+	cout<<maxProfit(profit,n);
 	
 }
