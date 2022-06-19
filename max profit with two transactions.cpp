@@ -46,13 +46,14 @@ int maxProfit(vector<int> profit,int n){
 		dp2[i]=dp2[i-1];
 	}
 	
-	int ans=0;
+	int anss=0;
 	for(int i=0;i<n;i++){
-		
-		ans=max(ans,dp1[i]+dp2[i]);
+		cout<<anss<<endl;
+		cout<<dp1[i] + dp2[i]<<endl;
+		anss=max(anss,dp1[i]+dp2[i]);
 	}
 	
-	return ans;
+	return anss;
 }
 
 int main(){
