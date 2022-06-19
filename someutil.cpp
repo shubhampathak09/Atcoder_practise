@@ -10,4 +10,8 @@ int main(){
 		cout<<ch<<" ";
 	}
 	
+	cout<<endl;
+	cout<<(1/3)*3<<endl;
+	cout<<(1/3) *3<<endl;
+	
 }

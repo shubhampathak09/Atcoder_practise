@@ -30,7 +30,7 @@ bool isSafe(int mat[][9],int i,int j,int no,int n){
 	
 	for(int x=sx;x<sx+3;x++){
 		for(int y=sy;y<sy+3;y++){
-			if(mat[sx][sy]==no)
+			if(mat[x][y]==no)
 			return false;
 		}
 	}
