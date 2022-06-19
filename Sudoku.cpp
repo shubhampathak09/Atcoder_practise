@@ -12,15 +12,22 @@ bool isSafe(int mat[][9],int i,int j,int no,int n){
 	
 	
 	// check for row and col
-    for(int k=0;k<n;k++){
-    	if(mat[k][j]==no || mat[i][k]==no)
-    	return false;
-	}  	  
+     for(int k=0;k<n;k++){
+     	if(mat[k][j]==no)
+     	return false;
+	 }	  
+	
+	for(int k=0;k<n;k++)
+	if(mat[i][k]==no)
+	return false;
+	
+	 
 	
 	// number present in 3 X 3 subgrid :-
 	
 	int sx=(i/3) * 3;
 	int sy=(j/3) * 3;
+	
 	for(int x=sx;x<sx+3;x++){
 		for(int y=sy;y<sy+3;y++){
 			if(mat[sx][sy]==no)
@@ -111,6 +118,8 @@ return false;
 		 }
 	 };
  	
+ 	
+  
  	
  	if(!solveSudoku(mat,0,0,n))
  	cout<<"No sol";
