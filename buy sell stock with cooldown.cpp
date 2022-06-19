@@ -44,7 +44,12 @@ int maxProfit(vector<int>profit,int n)
 }
 int main(){
 	
+	vector<int> trs={};
 	
+	int ans =maxProfit(trs,trs.size());
+	
+	
+	//result
 }
 
 
