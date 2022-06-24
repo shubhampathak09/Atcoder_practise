@@ -13,7 +13,7 @@ bool check(int x){
 		int rem=res%10;
 //		cout<<rem<<endl;
 		sum = sum * 10 + rem;
-		cout<<sum;
+//		cout<<sum;
 		res=res/10;
 		
 		

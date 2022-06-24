@@ -15,7 +15,7 @@ int main(){
 	
 	string s="#abb##vb####vvvbfrr#";
 	
-	//	string s="vvvbfr";  
+	// 	string s="vvvbfr";  
 	  
 	int len=0;
 	for(int i=0;i<s.length();i++){

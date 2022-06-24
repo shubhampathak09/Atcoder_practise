@@ -14,8 +14,11 @@ for(int x=0;x<k;x++){
 	if(visited.count(val)==0)
 	{
 		visited.insert(val);
+		
 		string node=val.substr(1);
+		
 		dfs(val,n,k,ans,visited);
+		
 		ans+=to_string(x);
 	}
 }	

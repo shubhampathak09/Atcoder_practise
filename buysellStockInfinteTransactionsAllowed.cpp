@@ -18,7 +18,7 @@ int maxProfit(vector<int>profit,int n){
 		}else
 		{
 			checkDip=true;
-			cout<<profit[sd]-profit[bd]<<endl;
+		//	cout<<profit[sd]-profit[bd]<<endl;
 			profitT+= profit[sd] -profit[bd];
 			sd=bd=i;
 		}
