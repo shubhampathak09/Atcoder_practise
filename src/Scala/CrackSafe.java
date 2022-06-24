@@ -42,7 +42,7 @@ public class CrackSafe {
 
         ans.append(start);
 
-        System.out.println(ans);
+        System.out.println(ans.toString());
     }
 
 }
