@@ -3,7 +3,7 @@
 using namespace  std;
 
 
-int  f(int index,vector<int>arr,int n){
+int  f(int index,vector<int>arr,int n,vector<int>dp){
 	
 	if(index==0)
 	return arr[index];
@@ -11,11 +11,13 @@ int  f(int index,vector<int>arr,int n){
 	if(index-2<0)
 	return 0;
 	
+	if(dp[index]!=-1)
+	return dp[index];
 	
-	int include=f(index-2,arr,n) + arr[index];
-	int exclude=f(index-1,arr,n);
+	int include=f(index-2,arr,n,dp) + arr[index];
+	int exclude=f(index-1,arr,n,dp);
 	
-	return max(include,exclude);
+	return dp[index]=max(include,exclude);
 	
 	
 }
@@ -24,10 +26,12 @@ int  f(int index,vector<int>arr,int n){
 int main(){
 	
 	
-	vector<int>arr={1,2,9,4,5,0,4,11,6};
+	vector<int>arr={1,2,3,1};
 	int n=arr.size();
-	
-	int ans=f(n-1,arr,n);  //-> o(2 ^n))
+    
+	vector<int>dp(n,-1);
+		
+	int ans=f(n-1,arr,n,dp);  //-> o(2 ^n))
 	
 	cout<<ans;
 }
