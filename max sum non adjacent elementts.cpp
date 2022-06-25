@@ -27,7 +27,7 @@ int main(){
 	
 	
 	vector<int>arr={1,2,3,1};
-	arr.insert(arr.begin()+0,0);
+	//arr.insert(arr.begin()+0,0);
 	int n=arr.size();
     
 	vector<int>dp(n,-1);
