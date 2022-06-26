@@ -17,6 +17,8 @@ object LastElementOfLisy extends App {
      myList.foreach{x:Int => print(x+" ")}
 
   println(myList.last);
+  // get second last element
 
-  
+
+
 }
