@@ -8,5 +8,15 @@ object LastElementOfLisy extends App {
   val y = myList.last;
 
   println("The Last element of list is.."+y)
+//
+//  for(element <- myList.last)
+//    {
+//      print(element)
+//    }
 
+     myList.foreach{x:Int => print(x+" ")}
+
+  println(myList.last);
+
+  
 }
