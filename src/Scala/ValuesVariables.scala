@@ -33,7 +33,7 @@ object ValuesVariables extends App{
   // dislaying something on screen
   //etc side effects cant be removed entirely
 
-  
+
 
 
 }
