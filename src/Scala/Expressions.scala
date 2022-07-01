@@ -51,6 +51,22 @@ object Expressions extends App {
   }
 
 
+  // differnece between "hello world" and println("Hello worls")
+  //uimt vs string
 
 
+   val someValue={
+     2<3  //1
+   }
+   println(someValue)
+  val someOtherValue= {
+    if(someValue) 239 else 986
+    42
+  }
+  println(someOtherValue)
+
+
+  // value of code block is the last executed expressions
+
+  
 }
