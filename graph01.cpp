@@ -68,3 +68,18 @@ int main(){
 	
 	g.printAdjList();
 }
+
+
+// sp using bfs
+//snake and ladders
+///dfs
+//cycle detection in unidrected grahs
+//back edge detection\
+//dijkstras algorithm
+//Board game -> trie +backtracking + graph
+//shortest grid path
+//board game implementation
+//Largest island
+//Astronaut pairs
+// Gra[h sequence
+//

@@ -17,7 +17,7 @@ worked on email sender with mime protocl and azkaban integration
 -deeveloping a fp tree based segment modelling -> extenstion of relevance
 ->provide the best possible targetting
 -> Grafana dashboard integrations in metrics
--billing process
+-billicd ..ng process
 
 
 
