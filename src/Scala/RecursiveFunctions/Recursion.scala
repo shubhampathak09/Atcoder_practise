@@ -42,5 +42,19 @@ object Recursion extends App {
   // IsPrime function tail reucrsion
   // fibonnacci rail recrsion
 
+
+  def stringCon(s:String, n:Int) :String=
+    {
+      @tailrec
+      def stringHelper(s:String,n:Int,result:String):String=
+        if(n<1)
+          result
+        else
+          stringHelper(s,n-1,s+result)
+
+     stringHelper("abc",3,"")
+    }
+
+  
 }
 
