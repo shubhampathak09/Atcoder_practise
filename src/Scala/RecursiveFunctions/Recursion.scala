@@ -1,5 +1,6 @@
 package Scala.RecursiveFunctions
 
+import scala.annotation.tailrec
 import scala.jdk.Accumulator
 
 object Recursion extends App {
@@ -22,17 +23,24 @@ object Recursion extends App {
   println(factorial(10))
 
   def anotherFactorial(n:Int) :Int ={
+    @tailrec
     def factHelper(x :Int,accumulator: Int):Int =
       if (x<=1)
         accumulator
       else
-        factHelper(x-1,x*accumulator)
+        factHelper(x-1,x*accumulator) //TAIL Recursion = use recursive call as last expression
 
-     factHelper(n,1)
+     factHelper(n,1) //
 
   }
 
   //  10  -> 10,1  -9 ,10     9,10     8,10 *9 .. and so one
+
+  // when you need loop use tail recusion
+
+  // string concat n times using tail recusrion
+  // IsPrime function tail reucrsion
+  // fibonnacci rail recrsion
 
 }
 
