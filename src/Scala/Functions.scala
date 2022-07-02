@@ -78,7 +78,7 @@ object Functions extends App {
   def checkPrime(a:Int):Boolean ={
     def isPrimeUntil(t:Int):Boolean =
       if(t<=1) return true
-      else isPrimeUntil(t-1) && a%t!=0
+      else isPrimeUntil(t-1)  && a%t!=0
 
     isPrimeUntil(a/2)
   }

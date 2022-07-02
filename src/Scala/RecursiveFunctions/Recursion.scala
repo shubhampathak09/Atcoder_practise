@@ -55,6 +55,33 @@ object Recursion extends App {
      stringHelper("abc",3,"")
     }
 
-  
+    def IsPrime(n :Int) :Boolean =
+    {
+      def IsPrimeUntil(k:Int) :Boolean=
+        if(k<=1)
+          true
+        else if (n % k==0) false
+          else
+          IsPrimeUntil(k-1)
+        IsPrimeUntil(n-1)
+    }
+
+   println(IsPrime(101))
+
+
+  // fibonacci tail recusrions
+
+  def fib(n:Int) :Int ={
+    def fibUtil(n:Int,last:Int,seconLast:Int,result:Int):Int={
+      if(n<=2)
+        result
+      else
+        fibUtil(n-1,result,last,last+seconLast)
+
+    }
+    fibUtil(n,1,1,1)
+  }
+
+  println(fib(100))
 }
 
