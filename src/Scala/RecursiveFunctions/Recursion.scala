@@ -82,6 +82,6 @@ object Recursion extends App {
     fibUtil(n,1,1,1)
   }
 
-  println(fib(100))
+  println(fib(8))
 }
 
