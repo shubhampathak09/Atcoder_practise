@@ -1,5 +1,7 @@
 package Scala.RecursiveFunctions
 
+import java.util.concurrent.RecursiveTask
+
 object Day2  extends  App{
 
   // General way to conver for loop and while loop to recursion in scala
@@ -15,5 +17,32 @@ object Day2  extends  App{
 
 
   // general idea Line recursive vs tail recursive
+
+  //foo_iterative(params){
+  //    header
+  //    while(condition){
+  //        loop_body
+  //    }
+  //    return tail
+  //}
+
+
+ // RecursiveTask
+
+  //oo_recursive(params){
+  //    header
+  //    return foo_recursion(params, header_vars)
+  //}
+  //
+  //foo_recursion(params, header_vars){
+  //    if(!condition){
+  //        return tail
+  //    }
+  //
+  //    loop_body
+  //    return foo_recursion(params, modified_header_vars)
+  //}
+
+  
 
 }
