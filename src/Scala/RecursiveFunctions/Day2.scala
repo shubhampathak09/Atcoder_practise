@@ -1,6 +1,7 @@
 package Scala.RecursiveFunctions
 
 import java.util.concurrent.RecursiveTask
+import scala.collection.mutable
 
 object Day2  extends  App{
 
@@ -15,7 +16,14 @@ object Day2  extends  App{
     doSumUtil(n,0);
   }
 
-
+// mutable collections can updated and extendded in place
+  //add change or remove the elements of a collection as a side effect
+  // mutabl collection are IndexedSeq[T],
+  // root collection and immutable collection
+  // collection  -> immutable or mutable
+  // collection.mutable.Set or collection.mutable.Iterable
+  // collection.mutable  collection.generic
+  // root collection scala.collection interface mutable and non mutable
   // general idea Line recursive vs tail recursive
 
   //foo_iterative(params){
@@ -26,7 +34,8 @@ object Day2  extends  App{
   //    return tail
   //}
 
-
+// Traversable, Iterable,Seq,IndexedSeq,Iterator,Stream,Vector,StringBuilder
+  //Range
  // RecursiveTask
 
   //oo_recursive(params){
@@ -43,6 +52,6 @@ object Day2  extends  App{
   //    return foo_recursion(params, modified_header_vars)
   //}
 
-  
+
 
 }
