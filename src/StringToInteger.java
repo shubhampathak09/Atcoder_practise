@@ -1,8 +1,39 @@
 public class StringToInteger {
 
+
+    public static int myAtoi(String s) {
+
+        int foo=0;
+        int i=0;
+        boolean isNeg=false;
+
+        while(s.charAt(i)==' '){
+            i++;
+        }
+
+        if(s.charAt(i)=='-'){
+            isNeg=true;
+            i++;
+        }
+
+        while(i<s.length()){
+            if(!Character.isDigit(s.charAt(i)))
+            {
+                break;
+            }
+            foo=foo*10;
+            foo+=s.charAt(i)-'0';
+            i++;
+        }
+        if(isNeg){
+            foo=-1*foo;
+        }
+        return foo;
+    }
+
     public static void main(String[] args){
 
-        String s=null;
+        String s=" 0032";
 
         //System.out.println(Integer.parseInt(s));
         int foo;
@@ -18,7 +49,8 @@ public class StringToInteger {
            // e.printStackTrace();
 
         }
-
+        System.out.println(myAtoi(
+                "4193 with words"));
     }
 
 }
