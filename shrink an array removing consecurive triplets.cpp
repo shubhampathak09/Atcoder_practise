@@ -10,9 +10,9 @@ int solve(vector<int>a,int k,int start,int end){
 	}
 	
 	int res=0;
-	
-	res = 1 +solve(a,k,start+1,end); // a[start] does not form a triplet
+	k,start+1,end); // a[start] does not form a triplet
 
+	res = 1 +solve(a,
 	for(int i=start+1;i<=end;i++){
 		
 		
@@ -20,8 +20,8 @@ int solve(vector<int>a,int k,int start,int end){
 		
 			if(a[i] == a[start] + k && a[j] == a[i] + k){
 		        //cout<<i<<j<<endl; 
-				if(solve(a,k,start+1,i-1) != 0 && solve(a,k,i+1,j-1) != 0){
-		
+						if(solve(a,k,start+1,i-1) != 0 && solve(a,k,i+1,j-1) != 0){
+
 					int n= solve(a,k,j+1,end);
 	               // cout<<n<<endl;	
 					if(res > n){
@@ -40,7 +40,7 @@ int main(){
     
 	cout<<a.size();
 	
-	int k=3;
+	int k=1;
 	
 	cout<<solve(a,k,0,5);
 		

@@ -9,7 +9,7 @@ public class IslandShapePermiter {
 
 
     public static int solve(int[] [ ] matrix){
-        
+
         return 0;
     }
 
