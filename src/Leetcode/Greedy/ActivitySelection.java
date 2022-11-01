@@ -1,9 +1,7 @@
 package Leetcode.Greedy;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 
 public class ActivitySelection {
 
@@ -30,7 +28,19 @@ public class ActivitySelection {
         }
         Collections.sort(p);
 
-        
+        int count =1;
+
+        int fx = p.get(0).finish;
+        int sx;
+
+        for(int i=1 ;i < p.size() ;i++){
+
+            if(p.get(i).start > fx){
+                count++;
+                fx = p.get(i).finish;
+            }
+        }
+        System.out.println("total tasks that can be completed.."+count);
     }
 
 }
