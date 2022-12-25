@@ -16,8 +16,8 @@ public class MoleculeToAtoms {
     /**
      * String fremySalt = "K4[ON(SO3)2]2";
      * parseMolecule.getAtoms(fremySalt); // return ["K": 4, "O": 14, "N": 2, "S": 4]
-     * @param args
-     */
+     * @param
+     **/
 
     public static Collection<Object[]> data(){
         return Arrays.asList(new  Object[][]{
