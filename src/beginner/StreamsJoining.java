@@ -12,7 +12,7 @@ public class StreamsJoining {
 public static void main(String[] args){
 
     System.out.println(smash(new String[]{"Hello","World","And Happy new Year 2023"}));
-     
+
 }
 }
 
