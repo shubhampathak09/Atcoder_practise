@@ -19,3 +19,5 @@ int main(){
 	}
 	cout<<s.substr(0,idx);  //ab
 }
+
+// Stream.of(words).collect(Collectors.joininig(" "))
