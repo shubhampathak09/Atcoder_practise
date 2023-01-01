@@ -38,7 +38,8 @@ public class RevertTree {
     }
     public static void main(String[] args){
 
-        node root=new node(1);
+  //      System.out.println(Math.negateExact(6)); cool
+         node root=new node(1);
         root.left=new node(2);
         root.right=new node(3);
         System.out.println("Printing the tree structure before reversal");
