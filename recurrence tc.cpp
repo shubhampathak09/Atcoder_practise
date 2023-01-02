@@ -12,6 +12,17 @@ merge sort
 t(n)=
 
 recursion tree method
-number of levels, 
+number of levels, cost at each level, cost of last level
+add allcosts
+
+t(n)=2*t(n/2) +cn
+
+n  =  n/2 +n/2  cn
+
+      n/4 n/4  n/4 n/4
+      
+      
+      1 + 2
+
 
 
