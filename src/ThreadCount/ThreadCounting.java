@@ -27,8 +27,8 @@ public class ThreadCounting {
          * e.g. if the main loop relinquishes the lock on counter, in order for thread1
          * to call counter.count(i), where i is one of the numbers of form 3n+1, it may
          * be possible that thread2 acquires control of the lock, resulting in the wrong
-         * thread calling counter.count(i).
+         * thread calling counter.count(i). -ok
          */
-        
+
     }
 }
