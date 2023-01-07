@@ -9,7 +9,7 @@ public class Banjo {
         else
             return name + " does not play banjo";
     }
-    
+
 }
 
 
