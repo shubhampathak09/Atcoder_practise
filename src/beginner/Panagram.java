@@ -17,7 +17,18 @@ public class Panagram {
         }
         public static void main(String[] args){
             System.out.println(check("The quick brown fox jumps over the lay dg."));
+            String s1="The quick brown fox jumps over the lay dg.";
+            System.out.println("Method 2.."+   check1(s1));
+        }
+        public static  boolean check1(String Sentence){
+            for(char c='a';c<='z';c++){
+                if(!Sentence.toLowerCase().contains(""+c)){
+                    return false;
+                }
+            }
+            return true;
         }
 
+        // Pangram checker  -> 793 to 801  codewars  
 
 }
