@@ -31,8 +31,8 @@ object CBNvsCBV extends App{
   def infinite() :Int = 1 + infinite()
   def printFirst(x:Int,y: => Int) =println(x)
 
- // printFirst(infinite(),38)
-  printFirst(38,infinite())  // lazy streams
+ // printFirst(infinite(),38)  // will generate exception since the parameter is eval before passing to scala function
+  printFirst(38,infinite())  // lazy streams  no exception
 
 
 }
