@@ -2,6 +2,14 @@ package Scala.FunctionCalls
 
 object CBNvsCBV extends App{
 
+  /**
+   * CNB -> call by name, essentially a lazy stream declared by x: => Long(return type0
+   * CBV -> call by value, not a lazy stream evaluates expressions before and as result prone to exceptions
+   * example below cover the scenarios
+   * Credits to rock JVM in Scala
+   *  */
+
+
   def calledByValue(x:Long):Unit={
     println("by Value "+ x)
     println("by Value "+ x)
