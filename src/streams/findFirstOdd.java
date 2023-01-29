@@ -1,6 +1,7 @@
 package streams;
 
 import java.net.Inet4Address;
+import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -36,5 +37,42 @@ public class findFirstOdd {
         Set<Integer> numbers = Set.of(1, 4, 8, 40, 11, 22, 33, 99);
         Set<Integer>eveNumbers=numbers.stream().filter(x -> x % 2==0).collect(Collectors.toSet());
         System.out.println(numbers);
+
+       /** some exercised on practical scenarios **/
+
+
+
+    }
+
+    /** below just mocks some db layer **/
+
+    public interface orderRep{
+        public List<Order> findAllOrders();
+
+       public List<Product>findAllProduct();
+    }
+    public class Order{
+        private long id;
+        private String status;
+        LocalDate orderedDate;
+        LocalDate deliveryDate;
+        List<Product>products;
+        List<Customer>customers;
+
+    }
+    public class Product{
+
+        /** product details **/
+        private long id;
+        private String name;
+        private String category;
+        private double price;
+
+    }
+    public class Customer{
+        /** customer class will have name, id, tier**/
+        private long id;
+        private String name;
+        private int tier;
     }
 }
