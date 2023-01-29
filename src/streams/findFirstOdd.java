@@ -3,6 +3,7 @@ package streams;
 import java.net.Inet4Address;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -31,7 +32,9 @@ public class findFirstOdd {
         /**4.program to print even numbers from an array**/
         Arrays.stream(arr).filter(x -> x%2==0).forEach(System.out::print);
 
-        
-
+        /** Print even numbers from set **/
+        Set<Integer> numbers = Set.of(1, 4, 8, 40, 11, 22, 33, 99);
+        Set<Integer>eveNumbers=numbers.stream().filter(x -> x % 2==0).collect(Collectors.toSet());
+        System.out.println(numbers);
     }
 }
