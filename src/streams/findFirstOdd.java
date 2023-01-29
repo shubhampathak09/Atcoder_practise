@@ -61,7 +61,7 @@ public class findFirstOdd {
        List<Product>toyProducts=orderRepo.findAllProduct().stream()
                .filter(p -> p.getCategory().equalsIgnoreCase("Toys"))
                //.map(p ->p.setPrice(p.getPrice() * 0.9))   // map not working
-               .collect(Collectors.toList())
+               .collect(Collectors.toList());
 
     }
 
