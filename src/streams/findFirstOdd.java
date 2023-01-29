@@ -40,11 +40,34 @@ public class findFirstOdd {
 
        /** some exercised on practical scenarios **/
 
+       /**5 Obtain a list of products belongs to category “Books” with price > 100 **/
+       orderRepoImpl orderRepo=new orderRepoImpl();
+       List<Product>productsResult=orderRepo.findAllProduct()
+               .stream()
+               .filter(p -> p.getCategory().equalsIgnoreCase("Books"))
+               .filter(p -> p.getPrice() > 100)
+               .collect(Collectors.toList());
 
 
+       
     }
 
     /** below just mocks some db layer **/
+
+    public static class orderRepoImpl implements orderRep{
+
+        @Override
+        public List<Order> findAllOrders() {
+            /** create some dummy orders list **/
+            return null;
+        }
+
+        @Override
+        public List<Product> findAllProduct() {
+            /** create some dummy product list **/
+            return null;
+        }
+    }
 
     public interface orderRep{
         public List<Order> findAllOrders();
