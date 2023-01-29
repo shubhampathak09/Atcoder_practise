@@ -59,6 +59,53 @@ public class findFirstOdd {
         List<Product>products;
         List<Customer>customers;
 
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
+        }
+
+        public LocalDate getOrderedDate() {
+            return orderedDate;
+        }
+
+        public void setOrderedDate(LocalDate orderedDate) {
+            this.orderedDate = orderedDate;
+        }
+
+        public LocalDate getDeliveryDate() {
+            return deliveryDate;
+        }
+
+        public void setDeliveryDate(LocalDate deliveryDate) {
+            this.deliveryDate = deliveryDate;
+        }
+
+        public List<Product> getProducts() {
+            return products;
+        }
+
+        public void setProducts(List<Product> products) {
+            this.products = products;
+        }
+
+        public List<Customer> getCustomers() {
+            return customers;
+        }
+
+        public void setCustomers(List<Customer> customers) {
+            this.customers = customers;
+        }
     }
     public class Product{
 
@@ -68,11 +115,66 @@ public class findFirstOdd {
         private String category;
         private double price;
 
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getCategory() {
+            return category;
+        }
+
+        public void setCategory(String category) {
+            this.category = category;
+        }
+
+        public double getPrice() {
+            return price;
+        }
+
+        public void setPrice(double price) {
+            this.price = price;
+        }
     }
     public class Customer{
         /** customer class will have name, id, tier**/
         private long id;
         private String name;
         private int tier;
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public int getTier() {
+            return tier;
+        }
+
+        public void setTier(int tier) {
+            this.tier = tier;
+        }
     }
 }
