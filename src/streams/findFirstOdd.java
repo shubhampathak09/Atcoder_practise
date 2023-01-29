@@ -42,6 +42,7 @@ public class findFirstOdd {
 
        /**5 Obtain a list of products belongs to category “Books” with price > 100 **/
        orderRepoImpl orderRepo=new orderRepoImpl();
+
        List<Product>productsResult=orderRepo.findAllProduct()
                .stream()
                .filter(p -> p.getCategory().equalsIgnoreCase("Books"))
@@ -49,10 +50,23 @@ public class findFirstOdd {
                .collect(Collectors.toList());
 
 
-       
+       /**6 Obtain a list of order with products belong to category “Baby”**/
+       List<Order>ordersResult2=orderRepo.findAllOrders()
+               .stream()
+               .filter(o ->o.getProducts()
+                       .stream()
+                       .anyMatch(p ->p.getCategory().equalsIgnoreCase("Baby"))).collect(Collectors.toList());
+
+       /**7 Obtain a list of product with category = “Toys” and then apply 10% discount **/
+       List<Product>toyProducts=orderRepo.findAllProduct().stream()
+               .filter(p -> p.getCategory().equalsIgnoreCase("Toys"))
+               //.map(p ->p.setPrice(p.getPrice() * 0.9))   // map not working
+               .collect(Collectors.toList())
+
     }
 
     /** below just mocks some db layer **/
+
 
     public static class orderRepoImpl implements orderRep{
 
