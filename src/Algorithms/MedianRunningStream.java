@@ -8,8 +8,8 @@ import java.util.PriorityQueue;
 public class MedianRunningStream {
     /** optimised appraoch using heaps asked in nvidia **/
 
-    public static PriorityQueue<Integer> left=new PriorityQueue(Collections.reverse());
-    public static PriorityQueue<Integer> right =new PriorityQueue();
+    public static PriorityQueue<Integer> left=new PriorityQueue(Collections.reverseOrder());
+    public static PriorityQueue<Integer> right =new PriorityQueue();  //max heap
 
     public static void add(int val){
         if(right.size()>0 && val> right.peek())
