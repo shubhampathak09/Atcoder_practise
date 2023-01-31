@@ -19,6 +19,10 @@ public class CountingDuplicates {
         //0(n)
         for(int i=0;i<text.length();i++){
             char c=text.charAt(i);
+            if((c>='a' && c<='z')|| (c>='A' && c<='Z')){
+            Character ch=Character.toLowerCase(c);
+            hs.put(ch,hs.getOrDefault(ch,0)+1);
+            }else
             hs.put(c,hs.getOrDefault(c,0)+1);
         }
 
@@ -41,6 +45,7 @@ public class CountingDuplicates {
         System.out.println(duplicateCount(("Indivisibilities")));
         System.out.println(duplicateCount("aA11"));
         System.out.println(duplicateCount("ABBA"));
+        System.out.println(duplicateCount("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZReturnsTwentySix"));
     }
 
 /**
