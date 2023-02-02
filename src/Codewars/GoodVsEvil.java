@@ -50,7 +50,7 @@ public class GoodVsEvil {
         int goodSum= IntStream.range(0,good.length-1).map(i -> i*goodWorth[i]).sum();
         int badSum=IntStream.range(0,bad.length-1).map(i->i*evilWorth[i]).sum();
 
-        
+
         return goodSum > badSum ? goodConst : badSum > goodSum ? badConst : tieConst;
     }
 
