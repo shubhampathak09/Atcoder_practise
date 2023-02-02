@@ -32,5 +32,6 @@ public class AddingBigIntegers {
     }
     public static void main(String[] args){
         System.out.println(sum("122","2"));
+        System.out.println(sum("499","190"));
     }
 }
