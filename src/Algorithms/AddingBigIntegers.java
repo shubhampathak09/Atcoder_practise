@@ -2,6 +2,11 @@ package Algorithms;
 
 public class AddingBigIntegers {
     public static String sum(String s1,String s2){
+
+        /** remove leading zeroes **/
+        String strPat="^0+(?!$)";
+        s1=s1.replaceAll(strPat,"");
+        s2=s2.replaceAll(strPat,"");
         if(s1.length() > s2.length()){
             String t=s1;
             s1=s2;
@@ -33,5 +38,8 @@ public class AddingBigIntegers {
     public static void main(String[] args){
         System.out.println(sum("122","2"));
         System.out.println(sum("499","190"));
+        System.out.println(sum("382304817375","05061194457325792"));
+      //  382304817375 + 05061194457325792 ==> expected: <5061576762143167> but was: <05061576762143167>
+        //app2 w/0 regx return f.charAt(0) == '0' && f.length() > 1 ? f.substring(1, f.length()) : f; can use this logic
     }
 }
