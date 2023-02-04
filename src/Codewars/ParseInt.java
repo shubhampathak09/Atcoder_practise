@@ -26,15 +26,23 @@ public class ParseInt {
 
     public static int parseInt(String numStr) {
         numStr=numStr.replaceAll("\\band\\b","");
+        String[] strings=numStr.split(" ");
+
+        // 0- 20
+        // 30 40 50 60 70 80 90 100
+        // thousand
+        // 1 million
+        // store in hs
+        
         System.out.println(numStr);
         return -1;
     }
     public static void main(String[] args){
-        String input="Print this";
-        String input2="seven hundred eighty-three thousand nine hundred and nineteen";
-        System.out.println(input2.matches(".*\\band\\b.*"));
+       // String input="Print this";
+       // String input2="seven hundred eighty-three thousand nine hundred and nineteen";
+      //  System.out.println(input2.matches(".*\\band\\b.*"));
       //  System.out.println(input.matches("(?!).*?\\bthis\\b.*?"));
-        System.out.println(input.matches(".*\\bthis\\b.*"));
+    //    System.out.println(input.matches(".*\\bthis\\b.*"));
         //(?!) ignore case
         //.? any character before
         //b word boundry
