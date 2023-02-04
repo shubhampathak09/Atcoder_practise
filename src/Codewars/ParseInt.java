@@ -25,13 +25,22 @@ public class ParseInt {
 
 
     public static int parseInt(String numStr) {
-        numStr=numStr.replaceAll("\band\b","");
+        numStr=numStr.replaceAll("\\band\\b","");
         System.out.println(numStr);
         return -1;
     }
     public static void main(String[] args){
-        String input="thousand and suns";
-        System.out.println(input.matches("\band\b"));
-     //  parseInt("seven hundred eighty-three thousand nine hundred and nineteen");
+        String input="Print this";
+        String input2="seven hundred eighty-three thousand nine hundred and nineteen";
+        System.out.println(input2.matches(".*\\band\\b.*"));
+      //  System.out.println(input.matches("(?!).*?\\bthis\\b.*?"));
+        System.out.println(input.matches(".*\\bthis\\b.*"));
+        //(?!) ignore case
+        //.? any character before
+        //b word boundry
+        //and expression
+        ///b wrod boundary
+        //.*? any character after
+       parseInt("seven hundred and eighty-three thousand nine hundred and nineteen");
     }
 }
