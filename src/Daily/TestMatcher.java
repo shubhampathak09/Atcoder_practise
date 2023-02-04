@@ -10,5 +10,22 @@ public class TestMatcher {
     Matcher matcher=pattern.matcher("Visit W3Schools!");
     boolean foundMatch=matcher.find();
         System.out.println( foundMatch == true ? "Pattern Found": "Pattern Not Found");
+        String s="abc123xyz";
+        /** replace 123 withe one two three **/
+               s=s.replaceAll("[123]","OneTwoThree");
+        System.out.println(s);
+        // replace digts with one two three
     }
+
+
+
+
 }
+
+/** Match the digits **/
+/**
+abc123xyz
+define "123"
+var g = 123
+ Pattern [123]
+ **/
