@@ -15,6 +15,12 @@ public class TestMatcher {
                s=s.replaceAll("[123]","OneTwoThree");
         System.out.println(s);
         // replace digts with one two three
+
+        String s1="cat.dog.tree.pool.sugar.";
+
+                /**replace the . with ? **/
+        s1=s1.replaceAll("\\.","?");
+        System.out.println(s1);
     }
 
 
