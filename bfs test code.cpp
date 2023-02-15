@@ -36,10 +36,23 @@ void bfs(int source,int V){
 		cout<<"Shortest distance to node.. "<<i<<" is "<<dist[i]<<endl;
 	}
 	
+	
+	// print the path from source
+	if(dest!=-1){
+		int temp=dest;
+		while(temp!=source){
+			cout<<temp <<"...";
+			temp=parent[temp];
+		}
+		cout<<temp<<endl;
+		
+	}
 }
 
 int main(){
 	
 	
-	
+/**
+test code here
+**/	
 }
