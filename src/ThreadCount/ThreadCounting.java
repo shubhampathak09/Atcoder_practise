@@ -30,7 +30,32 @@ public class ThreadCounting {
          *        until the main loop determines otherwise).
          *
          */
+         synchronized (counter){
+             for(int i=1;i <=100; i++){
+                 if((i % constantDiff)==1){
+                     counterThread1.setCanCallCount(true);
+                     try{
+                         counter.wait();
+                     }catch (InterruptedException e){
 
+                     }
+                 }else if((i % constantDiff)==2){
+                     counterThread2.setCanCallCount(true);
+                     try{
+                         counter.wait();
+                     }catch ( InterruptedException e){
+
+                     }
+                 }else if((i % constantDiff)==3){
+                     counterThread3.setCanCallCount(true);
+                     try{
+                         counter.wait();
+                     }catch (InterruptedException e){
+
+                     }
+                 }
+             }
+         }
     }
 
 }
