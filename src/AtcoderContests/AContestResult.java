@@ -12,6 +12,7 @@ public class AContestResult {
         for(int i=0;i<n;i++){
             a[i]=s.nextInt();
         }
+
         int sum=0;
         for(int i=1;i<=m;i++){
             int x=s.nextInt();
