@@ -15,6 +15,11 @@ public class Knapsack {
         else
             return max(val[n-1]+ knapSack(W-wt[n-1],wt,val,n-1),knapSack(W,wt,val,n-1));
     }
+
+    static int knapSackMem(int W,int wt[],int val[],int n){
+        return 0;
+    }
+
     public static void main(String[] args){
 
         int val[]={60,100,120};
