@@ -10,7 +10,7 @@ public class CountCoins {
      * @param sum
      * @return
      */
-    static int count1(int coin[],int n,int sum){
+    static int count1(int coin[],int n,int sum,int dp[][]){
 
         if(sum==0)
             return 1;
@@ -19,13 +19,20 @@ public class CountCoins {
         if(n <=0 )
             return 0;
 
-        return count1(coin,n-1,sum) + count1(coin,n,sum-coin[n-1]);
+        if(dp[n][sum]!=0)
+            return dp[n][sum];
+
+        dp[n][sum]=count1(coin,n-1,sum,dp) +count1(coin,n,sum-coin[n-1],dp);
+
+        return dp[n][sum];
     }
 
     public static void main(String[] args){
            int coins[] ={1,2,3};
            int n=coins.length;
-        System.out.println(count1(coins,n,4));
+           int sum=4;
+           int [][] dp=new int[n+1][sum+1];
+        System.out.println(count1(coins,n,4,dp));
     }
 
 }
