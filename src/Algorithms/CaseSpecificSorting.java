@@ -43,5 +43,7 @@ public class CaseSpecificSorting {
             }
         }
         System.out.println(s.toString());  //eEfggkEkrEOsS  eEfggkEkrEOsS
+        //spin
+
     }
 }
