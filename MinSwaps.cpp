@@ -51,5 +51,8 @@ int countMinSwaps(vector<int> arr){
 }
 
 int main(){
-	
+//
+//vector<int>a{5,4,3,2,1};
+//int an=countMinSwaps(a);
+//cout<<an<<endl;	
 }
