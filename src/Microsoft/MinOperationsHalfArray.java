@@ -9,22 +9,24 @@ public class MinOperationsHalfArray {
     /**https://leetcode.com/problems/minimum-operations-to-halve-array-sum/ **/
 
     public static int halveArray(int[] nums) {
-        int sum=0;
+        double sum=0;
         for(int i=0;i<nums.length;i++){
             sum+=nums[i];
         }
 
-        PriorityQueue<Integer>pq= new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Double>pq= new PriorityQueue<>(Collections.reverseOrder());
         for(int i=0;i<nums.length;i++){
-            pq.add(nums[i]);
+            pq.add((double) nums[i]);
         }
 
-        double temp=sum;
+        double runningSum=0;
+
         int cnt=0;
-        while(temp  > sum/2){
-            int x=pq.remove();
-            temp = temp - Math.ceil((1.0 * x)/2);
-            pq.add(x/2);
+        while(runningSum < sum/2){
+            double maxVal=pq.peek() /2;
+            runningSum+=maxVal;
+            pq.remove();
+            pq.add(maxVal);
             cnt++;
         }
         return cnt;
