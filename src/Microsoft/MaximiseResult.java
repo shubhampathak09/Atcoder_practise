@@ -3,10 +3,10 @@ package Microsoft;
 public class MaximiseResult {
    /** https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/  **/
 
-   public String removeDigit(String number,char digit){
+   public static String removeDigit(String number,char digit){
 
        int index=-1;
-       for(int i=0;i<number.length();i++){
+       for(int i=0;i<number.length()-1;i++){
            if(number.charAt(i)==digit && number.charAt(i) - '0' < number.charAt(i+1) -'0'){
                index =i;
                break;
@@ -34,7 +34,7 @@ public class MaximiseResult {
 
        String  number="123";
        char digit='3';
-
+        System.out.println(removeDigit(number,digit));
 
     }
 }
