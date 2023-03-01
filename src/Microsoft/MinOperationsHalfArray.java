@@ -34,4 +34,7 @@ public class MinOperationsHalfArray {
        int number=halveArray(nums);
         System.out.println(number);
     }
+    /** needs review since some test case fail over lc ** /
+     *
+     */
 }
