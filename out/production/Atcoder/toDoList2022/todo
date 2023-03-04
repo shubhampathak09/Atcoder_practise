@@ -44,3 +44,19 @@ fitn = sqrt((cs -is)^2 + (cp-ip)^2)
 // 2023
 
 1.
+
+
+courses
+1. Java Multihreading udemy
+2. Multithreading and parallel computing udemy
+3.Applying Concurrency and Multi threading  to common java patterns pluralsight
+4.Efficient Java Multithreading with Executors udemy
+5.Java Concurrency in Practise Bundle   Dr. Heinz M. Kabutz.
+
+
+Streams and Generics
+1.Introduction to Collections and Generics
+2. Java Fundamentals: Collections By Richard Warburton [Pluralsight]
+3.  Java Streams API Developer Guide [Best Udemy Course]
+4. From Collections to Streams in Java 8 Using Lambda Expressions
+5. Modern Java - Learn Java 8 features by coding it

@@ -1,6 +1,7 @@
 package Microsoft;
 
 import scala.Int;
+import scala.jdk.FunctionWrappers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,7 +11,7 @@ public class FindMissingObservations {
 
       //  return new int[]{2,3,4};
 
-        int sum =0 ; // (n + rolls.length) *mean
+        int sum =(rolls.length + n )*mean ; // (n + rolls.length) *mean
         int  missum = sum - Arrays.stream(rolls).sum();
         int [] ans=new int[n];
         Arrays.fill(ans,missum/n);
@@ -33,7 +34,11 @@ public class FindMissingObservations {
       int mean=4;
       int n=2;
       int m=rolls.length;
-
+      int[] result=missingRolls(rolls,mean,2);
+      for(int i=0;i<result.length;i++)
+      {
+          System.out.print(result[i]+" ");
+      }
 //      12 + s / 2 + 4  =   12 +s / 6  = 4
 //
 //              12 +s =24
