@@ -3,13 +3,21 @@ package Microsoft;
 import scala.Int;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FindMissingObservations {
     public static int[] missingRolls(int[] rolls, int mean, int n) {
 
         return new int[]{2,3,4};
 
-
+        int sum =0 ; // (n + rolls.length) *mean
+        int  missum = sum - Arrays.stream(rolls).sum();
+        int [] ans=new int[n];
+        Arrays.fill(ans,missum/n);
+        int missum =missum % n
+        for(int i=0;i<missum ;i++){
+            ans[i]=ans[i]+1;
+        }
     }
 
     public static ArrayList<Integer> findArray(int S, int n,ArrayList<Integer>result)
