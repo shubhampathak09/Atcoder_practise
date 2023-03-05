@@ -26,10 +26,10 @@ public class ThreeDivisors {
         * The number must be prime number * prime number and perfect square
         */
 
-       int n=100;
+       int n=25;
 
-       double p=Math.sqrt(100);
-
+       //double p=Math.sqrt(100);
+       double p=Math.sqrt(n);
        if(p * p == (double) n){
            if(isPrime((int)p)){
                System.out.println(n +" has 3 factors exactly");
