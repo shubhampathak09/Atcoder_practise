@@ -15,6 +15,12 @@ public class ThreeDivisors {
        return true;
    }
 
+    /** optimise using sieve later ** /
+     *
+     * @param args
+     */
+
+
    public static void main(String[] args){
        /** check if a number has exactly three divisors **?
         *
@@ -25,6 +31,9 @@ public class ThreeDivisors {
         *
         * The number must be prime number * prime number and perfect square
         */
+
+
+
 
        int n=25;
 
