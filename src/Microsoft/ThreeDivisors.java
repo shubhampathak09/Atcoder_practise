@@ -34,7 +34,7 @@ public class ThreeDivisors {
 
 
 
-
+       // n=49 true  n=50 false
        int n=25;
 
        //double p=Math.sqrt(100);
