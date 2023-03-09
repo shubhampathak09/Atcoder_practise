@@ -1,4 +1,4 @@
-package Codewars.CodingInterviewGeneral;
+package Daily.CodingInterviewGeneral;
 
 import java.util.Arrays;
 
@@ -20,6 +20,11 @@ public class TwoSum {
     }
 
     public static void main(String[] args){
-
+        int A[]={1,4,45,6,10,-8};
+        int n=A.length;
+        if(hasTwoSum(A,n,16)){
+            System.out.println("Yes");
+        }else
+            System.out.println("No");
     }
 }
