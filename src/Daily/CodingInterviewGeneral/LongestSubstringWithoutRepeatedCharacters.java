@@ -15,7 +15,22 @@ public class LongestSubstringWithoutRepeatedCharacters {
         return true;
     }
 
-    public static void main(String[] args){
+    public static int longestSubString(String str){
+        int n=str.length();
+        int res=0;
+        for(int i=0;i<n;i++){
+            for (int j=i;j<n;j++){
+                if(areDistinct(str,i,j)){
+                    res =Math.max(res,j-i+1);
+                }
+            }
+        }
+        return res;
+    }
 
+    public static void main(String[] args){
+           String str="geeksforgeeks";
+           int len=longestSubString(str);
+        System.out.println(len);
     }
 }
