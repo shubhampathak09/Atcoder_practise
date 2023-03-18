@@ -33,4 +33,7 @@ public class LongestSubstringWithoutRepeatedCharacters {
            int len=longestSubString(str);
         System.out.println(len);
     }
+    /** time complextity
+     *  o(n^3)
+     * **/
 }
