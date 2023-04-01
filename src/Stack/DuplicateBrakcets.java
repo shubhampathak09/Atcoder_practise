@@ -7,7 +7,7 @@ public class DuplicateBrakcets {
     public static boolean check(String str){
      // ( ,a,b,c,d -> push
      // ) -> peek  ( no conten retur true ppek until (
-     // pop
+     // pop  sc
 
         Stack<Character> s =new Stack<>();
         for(int i=0;i<str.length();i++){
