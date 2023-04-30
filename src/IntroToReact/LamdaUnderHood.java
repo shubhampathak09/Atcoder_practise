@@ -18,6 +18,8 @@ public class LamdaUnderHood {
 //        };
 
      //byte class gone
+        // ;amda use type inference
+        // type inferance and invoke dynamic functionality
         FunctionalInterface fun= () -> System.out.println("implementaton 1 -> i am light weight");
         fun.myMethod();
     }
