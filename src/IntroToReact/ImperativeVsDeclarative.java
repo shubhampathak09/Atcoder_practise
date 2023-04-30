@@ -21,11 +21,12 @@ public class ImperativeVsDeclarative {
         int sumOfEvens2=0;
 
         System.out.println(sumOfEvens);
-        sumOfEvens2=IntStream.rangeClosed(0,100).filter( i -> i % 2 == 0)
+        sumOfEvens2=IntStream.rangeClosed(0,100)
+                .filter( i -> i % 2 == 0)
                 .reduce((x,y) -> x+y)
                 .getAsInt();
     // creates integer stream from 0 to 100
-
+    // Thread Safe Code
         System.out.println(sumOfEvens2);
     }
 
