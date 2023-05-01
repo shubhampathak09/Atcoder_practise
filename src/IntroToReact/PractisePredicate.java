@@ -21,12 +21,16 @@ public class PractisePredicate {
         list.add("");
 
         Predicate<String>predicate= s -> !s.isEmpty();
+        Predicate<String>pfilter = s -> s.contains("Basics");
 
         List<String> newList=filterList(list,predicate);
-
+        List<String>filterList=filterList(list,pfilter);
         /** contains only the nonempty string **/
 
         System.out.println(newList);
+        System.out.println(filterList);
+        /** retyun onlu string that citais basics **/
+
     }
 
     private static List<String> filterList(List<String> list, Predicate<String> predicate) {
