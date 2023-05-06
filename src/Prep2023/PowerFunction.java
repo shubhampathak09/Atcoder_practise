@@ -21,4 +21,12 @@ public class PowerFunction {
         int xn= x * xnm1;
         return xn;
     }
+
+
+    // logarithmic approach
+
+    public static int logPower(int x, int n){
+        return 0;
+    }
+
 }
