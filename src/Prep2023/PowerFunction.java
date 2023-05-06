@@ -17,7 +17,7 @@ public class PowerFunction {
         if(n==0)
             return 1;
 
-        int xnm1= power(x,n-1);
+        int xnm1= logPower(x,n-1);
         int xn= x * xnm1;
         return xn;
     }
@@ -28,7 +28,16 @@ public class PowerFunction {
     public static int logPower(int x, int n){
         // if x (n/2) * x(n/2)  if n is even
         // odd x *x(n-1/2) * x(n-1/2)
-        return 0;
+        if(n==0)
+            return 1;
+
+        int xeven = logPower(x,n/2);
+        int xn= xeven * xeven;
+
+        if(n % 2 == 1){
+            xn = x * xn;
+        }
+        return xn;
     }
 
 }
