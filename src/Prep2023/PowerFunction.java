@@ -26,6 +26,8 @@ public class PowerFunction {
     // logarithmic approach
 
     public static int logPower(int x, int n){
+        // if x (n/2) * x(n/2)  if n is even
+        // odd x *x(n-1/2) * x(n-1/2)
         return 0;
     }
 
