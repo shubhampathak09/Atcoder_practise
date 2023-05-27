@@ -18,3 +18,13 @@ def sum(seq):
     if(len(seq) == 0): return 0
     return seq[0] + sum(seq[1:])
 
+
+def until(n,filter_func ,v):
+    if(v == n): return []
+    if(filter_func(v)):
+     return v + until(n,filter_func,v+1)
+    else: return until(n,filter_func,v+1)
+
+
+
+until(10,multiple_3_5,0)
