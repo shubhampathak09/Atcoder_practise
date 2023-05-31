@@ -1,0 +1,84 @@
+1.Long url -> convert it to short url ( have a unique alias for it)
+2.short link once hit return redirect to original link
+3.Links will expire after time span (retention)
+4.Highly available , if system goes down all url  will stop working(shrtened once)
+5.shortet links should not be predictable . why??
+
+
+Assumptions and Estimates
+
+- 30 ml url shortenig per month
+-store requests upto 5 years
+-based on assumption of storing data upto 5 years -> 
+              -30 X 12 = 360M records in year  X 5 
+			  =  1830M = 1.8 billion records
+
+1.8 billion records
+
+
+url length 
+
+length of chars assume 7 chars long
+
+http://google.com ->  my.ly/cfvffr1
+
+7 -> [A-Z,a-z,0-9]  26+26 +10] ->62   ->  62^7 possibilites
+
+Data capacity
+
+2kb -> 2 X 1024 = 2048
+
+256 ASCII -> 8 BITS -> 1 BYTE  1 CHAR -> 1BYTE
+
+
+long url -> 2048 character  -> 2048 cchar -> 2 kb
+
+short url ->15 +  7 22 byte
+
+
+long url(2kb   short url 0.017   created_at(ts)(7 bytes) 0.007  expire_at(ts)(7 bytes) 0.007
+
+2.031 kb data 
+
+30 m X 2 .031 kb  60 X 10,00,000  / 1000 X 1000     =   60 gb  - 61 gb per month
+
+60 X 12 = 720gb 0.7 tb   
+
+
+0.7 X 5 = 3.5  Tb
+
+- read and writes   shouldd we go for sql or no sql
+-cachig
+- application cache (code level)
+- infra at load balancer -> cdn 
+- arhiveal s3
+
+Logic and algorithm to shorten url
+
+base62  or md5 technique
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			  
+
+
+
+
+
+
