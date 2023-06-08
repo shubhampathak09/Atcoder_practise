@@ -11,11 +11,6 @@ public class GenericTreeSize {
         ArrayList<Node> children =new ArrayList<>();
     }
 
-    public static int size(Node node){
-        int s=0;
-        return 0;
-    }
-
     public static void display(Node node){
 
         String str =node.data + " -> ";
@@ -30,6 +25,20 @@ public class GenericTreeSize {
         }
 
     }
+public static int size1(Node node){
+
+        int s =0;
+
+        for(Node child : node.children){
+            int cs = size1(child);
+            s+=cs;
+        }
+        s=s+1;
+
+        return s;
+}
+
+
 
     public static void main(String[] args){
         int[] arr ={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,
@@ -55,6 +64,8 @@ public class GenericTreeSize {
 
         }
         display(root);
+
+        System.out.println(size1(root));
     }
 
 }
