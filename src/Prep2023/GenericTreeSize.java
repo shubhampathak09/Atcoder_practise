@@ -39,6 +39,20 @@ public static int size1(Node node){
 }
 
 
+public static int maxNode(Node node){
+
+        int max = Integer.MIN_VALUE;
+
+        for( Node child : node.children){
+             int cm = maxNode(child);
+             max = Math.max(cm,max);
+        }
+
+        max = Math.max(node.data,max);
+
+        return max;
+}
+
 
     public static void main(String[] args){
         int[] arr ={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,
@@ -66,6 +80,8 @@ public static int size1(Node node){
         display(root);
 
         System.out.println(size1(root));
+
+        System.out.println(maxNode(root));
     }
 
 }
