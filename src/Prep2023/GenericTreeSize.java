@@ -63,6 +63,21 @@ public static int height(Node node){
         return ht;
 }
 
+
+public static void traversals(Node node){
+
+
+        System.out.println("Node Pre " + node.data); // while going in recursion
+        for(Node child : node.children){
+            // eddge pre
+            System.out.println("Edge Pre "+node.data + " " + child.data);
+            traversals(child);
+            System.out.println("Edge Post "+node.data + " " + child.data);
+        }
+    System.out.println("Node Post " + node.data);
+
+}
+
     public static void main(String[] args){
         int[] arr ={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,
         -1,-1,90,-1,-1,40,100,-1,-1,-1};
@@ -93,6 +108,8 @@ public static int height(Node node){
         System.out.println(maxNode(root));
 
         System.out.println(height(root));
+
+        traversals(root);
     }
 
 }
