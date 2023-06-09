@@ -1,6 +1,8 @@
 package Prep2023;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Queue;
 import java.util.Stack;
 
 public class GenericTreeSize {
@@ -82,7 +84,17 @@ public static void levelOrder(Node node){
       // queue ds
     // algo
     // remove print add children
-}
+    Queue<Node> q = new ArrayDeque<>();
+    q.add(node);
+    while(q.size() > 0){
+        Node temp = q.remove();
+        System.out.println(temp.data);
+        for(Node child : temp.children){
+            q.add(child);
+        }
+    }
+    System.out.println(".");
+    }
 
     public static void main(String[] args){
         int[] arr ={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,
@@ -107,15 +119,17 @@ public static void levelOrder(Node node){
             }
 
         }
-        display(root);
+      //  display(root);
 
-        System.out.println(size1(root));
+    //    System.out.println(size1(root));
 
-        System.out.println(maxNode(root));
+      //  System.out.println(maxNode(root));
 
-        System.out.println(height(root));
+        //System.out.println(height(root));
 
-        traversals(root);
+        //traversals(root);
+
+        levelOrder(root);
     }
 
 }
