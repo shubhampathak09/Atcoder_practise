@@ -53,6 +53,15 @@ public static int maxNode(Node node){
         return max;
 }
 
+public static int height(Node node){
+        int ht =0;   // change this to handle base case  in terms of edges ht = -1
+        for(Node child : node.children){
+            int ch =height(child);
+            ht  = Math.max(ht,ch);
+        }
+        ht +=1;
+        return ht;
+}
 
     public static void main(String[] args){
         int[] arr ={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,
@@ -82,6 +91,8 @@ public static int maxNode(Node node){
         System.out.println(size1(root));
 
         System.out.println(maxNode(root));
+
+        System.out.println(height(root));
     }
 
 }
