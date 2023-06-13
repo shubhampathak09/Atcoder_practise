@@ -41,4 +41,11 @@ public class BuySellStock6 {
         }
         System.out.println(dp[k][n]);
     }
+
+
+    // o n ^3
+
+
+    // optimmisation ??
+
 }
