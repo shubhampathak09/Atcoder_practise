@@ -50,5 +50,15 @@ public class BestTimeBuySellStock4 {
 
         System.out.println(ossp);
 
+
+        // int n=12
+
+        // 10  15
+        // 17 20
+        // 16 18
+        // 22 20
+        // 22 20
+        // 23 25
+
     }
 }
