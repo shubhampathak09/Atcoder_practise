@@ -16,4 +16,16 @@ public class Intro {
 
     // fp
 
+    // use case  Modern application development
+
+
+    // High data scale
+    // High usage scale
+    // availabilty
+    //Cloud based costs
+
+    
+
+
+
 }
