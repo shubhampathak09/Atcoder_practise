@@ -27,6 +27,8 @@ public class BestTimeBuySellStock2 {
                 bd= sd =i;
             }
         }
+        profit += arr[sd] - arr[bd]; // handle last case
+
         System.out.println(profit);
     }
 
