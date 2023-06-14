@@ -9,12 +9,14 @@ public class CoinChange {
 
         int[] dp = new int[n + 1];
 
+        dp[0]=1;
 
         for (int i = 0; i < arr.length; i++) {
 
-            dp[0]=1;
-            for (int j = arr[i]; j < dp.length; j++)
+
+            for (int j = 0; j < dp.length; j++)
             {
+                if( j >= arr[i])
                 dp[j] += dp[j - arr[i]];
             }
         }
