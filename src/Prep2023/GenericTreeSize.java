@@ -1,5 +1,7 @@
 package Prep2023;
 
+import scala.Int;
+
 import java.util.*;
 
 public class GenericTreeSize {
@@ -207,6 +209,25 @@ public static void mirror(Node node){
 
    }
 
+   public static ArrayList<Integer> nodeToRootPath(Node node,int data){
+
+       if (node.data == data) {
+
+           ArrayList<Integer>list = new ArrayList<>();
+           list.add(node.data);
+           return list;
+       }
+
+       for(Node child : node.children){
+           ArrayList<Integer>ptc = nodeToRootPath(child.data);
+           if(ptc.size() > 0){
+               ptc.add(node.data);
+           }
+       }
+
+       return new ArrayList<>();
+   }
+
    public static boolean find(Node node,int data){
 
         if(node.data ==data){
@@ -268,6 +289,7 @@ public static void mirror(Node node){
 
         linearize(root);
 
+        nodeToRootPath(root,110);
     }
 
 }
