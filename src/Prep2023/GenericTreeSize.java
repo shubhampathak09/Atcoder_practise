@@ -1,9 +1,6 @@
 package Prep2023;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class GenericTreeSize {
 
@@ -127,10 +124,25 @@ while(ms.size() > 0){
  *
  */
 
+
+
+
 }
 
 
 }
+
+
+public static void mirror(Node node){
+
+    for(Node child : node.children){
+        mirror(child);
+    }
+
+    Collections.reverse(node.children);
+
+}
+
 
 
  public static void levelOrderLineWise(Node node){
@@ -154,6 +166,46 @@ while(ms.size() > 0){
 
 
  }
+
+ public static void removeLeaves(Node node){
+
+
+     for(int i =node.children.size()-1 ;i>=0 ;i--){
+         Node child = node.children.get(i);
+         if(child.children.size() == 0){
+             node.children.remove(child);
+         }
+     }
+
+
+        for(Node child : node.children){
+            removeLeaves(child);
+        }
+
+
+ }
+
+ public  static Node getTail(Node node){
+
+        while(node.children.size() ==1){
+            node  = node.children.get(0);
+        }
+        return node;
+ }
+
+   public static void linearize(Node node){
+
+        for(Node child : node.children){
+            linearize(child);
+        }
+       while(node.children.size() > 1){
+           Node last = node.children.remove(node.children.size()-1);
+           Node slast = node.children.get(node.children.size()-1);
+           Node slt =getTail(slast);
+           slt.children.add(last);
+       }
+
+   }
 
     public static void main(String[] args){
         int[] arr ={10,20,50,-1,60,-1,-1,30,70,-1,80,110,-1,120,
@@ -193,6 +245,14 @@ while(ms.size() > 0){
      //   levelOrderLineWise(root);
 
         Zigzag(root);
+
+       // mirror(root);
+
+       // display(root);
+
+        removeLeaves(root);
+
+        linearize(root);
 
     }
 
