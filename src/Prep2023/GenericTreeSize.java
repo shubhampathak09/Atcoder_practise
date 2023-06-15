@@ -219,7 +219,7 @@ public static void mirror(Node node){
        }
 
        for(Node child : node.children){
-           ArrayList<Integer>ptc = nodeToRootPath(child.data);
+           ArrayList<Integer>ptc = nodeToRootPath(child,data);
            if(ptc.size() > 0){
                ptc.add(node.data);
            }
