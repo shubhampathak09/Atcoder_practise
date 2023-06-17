@@ -18,6 +18,22 @@ public class BSTTree {
     }
 
 
+    BurnBinaryTree.Node insert(BurnBinaryTree.Node root,int key){
+        if(root == null){
+            return new BurnBinaryTree.Node(key);
+        }
+        if(root.data > key){
+            root.left =insert(root.left,key);
+        }else if( root.data < key){
+            root.right = insert(root.right,key);
+        }
+        return root;
+    }
+
+
+
+
+
     public static void main(String[] args){
         // test here
     }
