@@ -21,7 +21,7 @@ public class LIS {
    int max =0;
 
 
-
+ 
    for(int j =0 ;j< i;j++){
 
        if(arr[j] < arr[i]){
