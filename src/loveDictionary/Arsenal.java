@@ -14,7 +14,7 @@ public class Arsenal {
         Scanner s = new Scanner(System.in);
         System.out.println("Prompt........");
         Thread.sleep(1000);
-        System.out.println("Happy Birthday to you Love");
+        System.out.println("Happy Birthday to you Prachiiiiiii, my Truuuuuu Loveeeee");
         String choice ="";
 
 //        Set<String> filteredChoice = new HashSet<>();
