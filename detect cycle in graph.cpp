@@ -27,7 +27,7 @@ bool isCyclic(int V,vector<vector<int>>adj){
 		int u=q.front();
 		q.pop();
 		visited++;
-		visited++;
+		//visited++;
 		for(auto x : adj[u]){
 			inDegree[x]--;
 			if(inDegree[x]==0)
@@ -43,6 +43,8 @@ void addEdge(int u,int v,vector<vector<int>>g){
 	g[u].push_back(v);
 	
 }
+
+//0 -> 1
 
 
 int main(){
