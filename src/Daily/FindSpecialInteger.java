@@ -11,6 +11,7 @@ public class FindSpecialInteger {
         for(int i=1;i<arr.length;i++){
             if(a == arr[i])
                 cnt++;
+            else cnt =1;
             if(cnt > qtr) return arr[i];
 
             a = arr[i];
