@@ -1,2 +1,12 @@
-package Prep;public class MarixMultiplication {
+package Prep;
+
+public class MarixMultiplication {
+
+
+
+
+    public static void main(String[] args){
+
+    }
+
 }
