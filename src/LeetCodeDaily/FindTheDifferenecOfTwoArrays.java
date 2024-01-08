@@ -46,6 +46,8 @@ public class FindTheDifferenecOfTwoArrays {
 
     public static void main(String[] args){
 
+        // return Arraya.asList(new ArrayList<>(ans1))
+
     }
 
 }
