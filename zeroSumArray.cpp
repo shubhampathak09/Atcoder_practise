@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
+// zero sum 
 bool checkZeroSum(vector<int> arr){
 	
 	set<int>s;
