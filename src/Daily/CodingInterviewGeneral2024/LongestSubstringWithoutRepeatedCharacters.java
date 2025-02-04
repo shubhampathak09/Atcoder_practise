@@ -1,4 +1,4 @@
-package Daily.CodingInterviewGeneral;
+package Daily.CodingInterviewGeneral2024;
 
 import java.util.HashSet;
 
